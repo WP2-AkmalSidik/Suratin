@@ -22,7 +22,9 @@
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Cari Surat..."
                                 aria-label="Cari Surat">
-                            <button class="btn btn-outline-primary" type="submit">Cari</button>
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="ri-search-line ri-22px"></i> <!-- Menambahkan ikon pencarian -->
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -71,11 +73,11 @@
                 </div>
                 @else
                 <div class="card shadow-sm" style="min-height: 300px;">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="text-center">Detail Surat</h5>
+                    <div class="card-header bg-primary text-center">
+                        <h5 class="text-white">Detail Surat</h5>
                     </div>
-                    <div class="card-body text-center">
-                        <h6 class="text-muted">Pilih surat untuk melihat detail.</h6>
+                    <div class="card-body text-center mt-10">
+                        <h6 class="text-muted mt-10">Pilih surat untuk melihat detail.</h6>
                     </div>
                 </div>
                 @endif
