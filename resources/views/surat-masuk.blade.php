@@ -15,6 +15,18 @@
                         Tambah Surat
                     </button>
                 </div>
+
+                <!-- Tombol Pencarian -->
+                <div class="mb-3">
+                    <form action="{{ route('surat-masuk.index') }}" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="search" placeholder="Cari Surat..."
+                                aria-label="Cari Surat">
+                            <button class="btn btn-outline-primary" type="submit">Cari</button>
+                        </div>
+                    </form>
+                </div>
+
                 <div class="list-group shadow-sm rounded">
                     @foreach($suratMasuk as $suratList)
                     <a href="{{ route('surat-masuk.show', $suratList->id) }}"
@@ -38,11 +50,11 @@
             <div class="col-lg-8 mb-4">
                 @if(isset($surat))
                 <div class="card shadow-sm" style="min-height: 300px;">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="text-center">Detail Surat - {{ $surat->nomor_surat }}</h5>
+                    <div class="card-header bg-primary text-center">
+                        <h5 class="text-white">Detail Surat - {{ $surat->nomor_surat }}</h5>
                     </div>
                     <div class="card-body">
-                        <p><strong>Pengirim:</strong> {{ $surat->pengirim }}</p>
+                        <p class="mt-3"><strong>Pengirim:</strong> {{ $surat->pengirim }}</p>
                         <p><strong>Perihal:</strong> {{ $surat->perihal }}</p>
                         <p><strong>Tanggal Surat:</strong> {{ $surat->tanggal_surat }}</p>
                         <p><strong>Keterangan:</strong> {{ $surat->keterangan ?: '-' }}</p>

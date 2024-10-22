@@ -9,8 +9,27 @@ use Illuminate\Support\Facades\Storage;
 
 class SuratMasukController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        // Ambil parameter pencarian
+        $search = $request->get('search');
+
+        // Jika ada pencarian, filter data surat masuk
+        if ($search) {
+            $suratMasuk = SuratMasuk::where('nomor_surat', 'LIKE', "%{$search}%")
+                ->orWhere('pengirim', 'LIKE', "%{$search}%")
+                ->get();
+
+            // Jika hanya ada satu hasil pencarian, langsung tampilkan detailnya
+            if ($suratMasuk->count() === 1) {
+                $surat = $suratMasuk->first(); // Ambil surat pertama (satu-satunya)
+                return view('surat-masuk', compact('suratMasuk', 'surat'));
+            }
+
+            // Jika banyak hasil pencarian, tampilkan daftar surat
+            return view('surat-masuk', compact('suratMasuk'));
+        }
+
         $suratMasuk = SuratMasuk::all();
         return view('surat-masuk', compact('suratMasuk'));
     }

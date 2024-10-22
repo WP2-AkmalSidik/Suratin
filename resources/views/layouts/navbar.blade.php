@@ -8,7 +8,7 @@
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <!-- Search -->
-        @livewire('search-surat')
+        @livewire('global-search')
         <!-- /Search -->
 
         <ul class="navbar-nav flex-row align-items-center ms-auto">
