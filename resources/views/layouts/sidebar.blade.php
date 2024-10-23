@@ -30,10 +30,10 @@
                 <div data-i18n="Extended UI">Surat</div>
             </a>
             <ul class="menu-sub">
-                <!-- Surat Masuk -->
-                <li class="menu-item {{ request()->is('surat-masuk*') ? 'active' : '' }}">
+                <!-- Surat Keluar Memo -->
+                <li class="menu-item {{ request()->is('surat-keluar*') ? 'active' : '' }}">
                     <a href="{{ route('surat-masuk.index') }}" class="menu-link">
-                        <div data-i18n="Perfect Scrollbar">Surat Masuk</div>
+                        <div data-i18n="Perfect Scrollbar">Surat Keluar Memo</div>
                     </a>
                 </li>
 

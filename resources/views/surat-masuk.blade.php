@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Surat Masuk')
+@section('title', 'Surat Keluar Memo')
 
 @section('content')
 <div class="content-wrapper">
@@ -9,7 +9,7 @@
             <!-- List Surat Masuk -->
             <div class="col-lg-4 mb-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="text-primary">List Surat Masuk</h5>
+                    <h5 class="text-primary">List Memo</h5>
                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                         data-bs-target="#inputSuratModal">
                         Tambah Surat
@@ -56,11 +56,11 @@
                         <h5 class="text-white">Detail Surat - {{ $surat->nomor_surat }}</h5>
                     </div>
                     <div class="card-body">
-                        <p class="mt-3"><strong>Pengirim:</strong> {{ $surat->pengirim }}</p>
-                        <p><strong>Perihal:</strong> {{ $surat->perihal }}</p>
-                        <p><strong>Tanggal Surat:</strong> {{ $surat->tanggal_surat }}</p>
-                        <p><strong>Keterangan:</strong> {{ $surat->keterangan ?: '-' }}</p>
-                        <strong>Foto Surat:</strong>
+                        <p class="mt-3"><strong>Penerima :</strong> {{ $surat->pengirim }}</p>
+                        <p><strong>Perihal :</strong> {{ $surat->perihal }}</p>
+                        <p><strong>Tanggal Surat :</strong> {{ $surat->tanggal_surat }}</p>
+                        <p><strong>Keterangan :</strong> {{ $surat->keterangan ?: '-' }}</p>
+                        <strong>Foto Surat :</strong>
                         <div class="mt-2">
                             @if($surat->foto_surat)
                             <img src="{{ asset('storage/' . $surat->foto_surat) }}" alt="Foto Surat"

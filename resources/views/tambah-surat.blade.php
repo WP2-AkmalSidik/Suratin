@@ -14,7 +14,7 @@
                         <input type="text" name="nomor_surat" class="form-control" placeholder="Masukkan nomor surat">
                     </div>
                     <div class="mb-3">
-                        <label for="pengirim" class="form-label">Pengirim</label>
+                        <label for="pengirim" class="form-label">Penerima</label>
                         <input type="text" name="pengirim" class="form-control" placeholder="Masukkan pengirim">
                     </div>
                     <div class="mb-3">
@@ -24,6 +24,11 @@
                     <div class="mb-3">
                         <label for="tanggal_surat" class="form-label">Tanggal Surat</label>
                         <input type="date" name="tanggal_surat" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="keterangan" class="form-label">Keterangan</label>
+                        <textarea type="text" name="keterangan" class="form-control"
+                            placeholder="Masukkan keterangan"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="foto_surat" class="form-label">Upload Scan Surat</label>
